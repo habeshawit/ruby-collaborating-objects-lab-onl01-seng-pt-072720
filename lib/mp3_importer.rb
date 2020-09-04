@@ -14,9 +14,10 @@ class MP3Importer
     Dir[path_].map{ |f| File.basename(f)}  #gets the file name without the file path 
     
     #Dir[path_].map{ |f| File.basename(f,".mp3")  #gets the file name and removes the ".mp3" from each file
+    
+    # Dir[path+"/*.mp3"] <-- accesses all the mp3 files in the directory paht
+
   end
-  
-  #binding.pry 
   
   def import
     files.each do |filename|
